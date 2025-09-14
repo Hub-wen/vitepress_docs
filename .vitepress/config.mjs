@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 //自定义配置
 export default defineConfig({
-  base: "/vitepress_docs/", // 这是部署到github相关的配置
+  base: "./vitepress_docs/", // 这是部署到github相关的配置
   title: "学习笔记文档库", //站点名
   description: "Aldebaran的学习笔记文档库", //站点描述
   lang: 'zh-CN', //语言，可选 en-US
