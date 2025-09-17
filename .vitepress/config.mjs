@@ -1,10 +1,9 @@
 import { defineConfig } from 'vitepress'
-// import {set_sidebar} from "./gen_sidebar.mjs";
-// import { set_sidebar } from "./auto_gen_sidebar.mjs";	// 改成自己的路径
+
 // https://vitepress.dev/reference/site-config
 //自定义配置
 export default defineConfig({
-  base: "/vitepress_docs/", // 这是部署到github相关的配置
+  base: '/docs/', //网站部署到github的vitepress这个仓库里
   title: "学习笔记文档库", //站点名
   description: "Aldebaran的学习笔记文档库", //站点描述
   lang: 'zh-CN', //语言，可选 en-US
@@ -12,7 +11,7 @@ export default defineConfig({
   //fav图标及谷歌字体
   head: [
     ['link',
-      { rel: 'icon', href: '/vitepress_docs/logo.png' }
+      { rel: 'icon', href: '/docs/imgs/logo.png' }
     ],
     [
       'link',
@@ -54,11 +53,19 @@ export default defineConfig({
   //主题配置
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/docs.png', //左上角logo
+    logo: '/imgs/docs.png', //左上角logo
     //siteTitle: false, //标题隐藏
     darkModeSwitchLabel: '深浅模式', //手机端深浅模式文字修改
+    //Algolia搜索
+    // search: {
+    //   provider: 'algolia',
+    //   options: {
+    //     appId: '<Application ID>',
+    //     apiKey: '<Search-Only API Key>',
+    //     indexName: '<INDEX_NAME>',
+    //   },
+    // },
     //本地搜索
-    // 设置搜索框的样式
     search: {
       provider: "local",
       options: {
@@ -110,7 +117,7 @@ export default defineConfig({
 
     //导航栏
     nav: [
-      // { text: 'Examples', link: '/markdown-examples' },
+      { text: '导航', link: '/nav/index' },
       {
         text: '笔记',
         items: [
@@ -230,6 +237,8 @@ export default defineConfig({
           { text: '日语', link: '/study/Japanese/index' },
         ]
       },
+      { text: '诗词', link: '/poetry' },
+      { text: '结婴', link: '/me' },
       { text: '关于', link: '/about' },
     ],
 
@@ -245,7 +254,7 @@ export default defineConfig({
     // ],
     // sidebar: {"/nuxt3": set_sidebar("nuxt3")},
     // sidebar: { "/docs/front-end/react": set_sidebar("docs/front-end/react") },
-    sidebar: false, // 关闭侧边栏
+    // sidebar: false, // 关闭侧边栏
     aside: "left", // 设置右侧侧边栏在左侧显示
 
     //自定义社交链接 
