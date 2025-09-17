@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 //自定义配置
 export default defineConfig({
-  base: '/docs/', //网站部署到github的vitepress这个仓库里
+  base: '/vitepres_docs/', //网站部署到github的vitepress这个仓库里
   title: "学习笔记文档库", //站点名
   description: "Aldebaran的学习笔记文档库", //站点描述
   lang: 'zh-CN', //语言，可选 en-US
@@ -11,7 +11,7 @@ export default defineConfig({
   //fav图标及谷歌字体
   head: [
     ['link',
-      { rel: 'icon', href: '/docs/imgs/logo.png' }
+      { rel: 'icon', href: '/vitepress_docs/imgs/logo.png' }
     ],
     [
       'link',
